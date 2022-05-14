@@ -5,7 +5,8 @@ layout: post
 <div id="outtime"></div>
 
 <script>
-document.getElementById("outtime").innerHTML = Date().getTime();
+var now = new Date().getTime();
+document.getElementById("outtime").innerHTML = now
 </script>
 
 <form action="outtime.txt">

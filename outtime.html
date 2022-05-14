@@ -7,7 +7,7 @@ layout: default
 <script>
 let currentDate = new Date();
 let time = currentDate.getHours() + ":" + currentDate.getMinutes() + ":" + currentDate.getSeconds();
-document.getElementById("outtime").innerHTML = now
+document.getElementById("outtime").innerHTML = outtime
 var now = new Date().getTime();
 </script>
 
@@ -19,7 +19,9 @@ function WriteToFile(passForm) {
  
     var firstName = document.getElementById('FirstName');
  
-    s.writeline("First Name :" + FirstName);
+    s.writeline(firstName);
+    s.writeline(currentDate);
+    s.writeline(time);
  
     s.Close();
  }

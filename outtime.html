@@ -5,15 +5,17 @@ layout: default
 <p id="outtime"></p>
 
 <script>
-var now = new Date().getTime();
+let currentDate = new Date();
+let time = currentDate.getHours() + ":" + currentDate.getMinutes() + ":" + currentDate.getSeconds();
 document.getElementById("outtime").innerHTML = now
+var now = new Date().getTime();
 </script>
 
 <script>
 function WriteToFile(passForm) {
  
     set fso = CreateObject("Scripting.FileSystemObject"); 
-    set s   = fso.CreateTextFile("outtime.txt", True);
+    set s   = fso.CreateTextFile("outtime2.txt", True);
  
     var firstName = document.getElementById('FirstName');
  

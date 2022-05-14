@@ -9,6 +9,7 @@ var now = new Date().getTime();
 document.getElementById("outtime").innerHTML = now
 </script>
 
+<script>
 function WriteToFile(passForm) {
  
     set fso = CreateObject("Scripting.FileSystemObject"); 
@@ -20,6 +21,7 @@ function WriteToFile(passForm) {
  
     s.Close();
  }
+</script>
 
 // HTML
 <form onSubmit="WriteToFile(this)">

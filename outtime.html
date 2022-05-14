@@ -9,8 +9,22 @@ var now = new Date().getTime();
 document.getElementById("outtime").innerHTML = now
 </script>
 
-<form action="outtime.txt">
-  <label for="fname">First name:</label>
-  <input type="text" id="fname" name="fname">
-  <input type="image" src="call.jpg" alt="Submit" style="float:right" width="48" height="48">
+function WriteToFile(passForm) {
+ 
+    set fso = CreateObject("Scripting.FileSystemObject"); 
+    set s   = fso.CreateTextFile("outtime.txt", True);
+ 
+    var firstName = document.getElementById('FirstName');
+ 
+    s.writeline("First Name :" + FirstName);
+ 
+    s.Close();
+ }
+
+// HTML
+<form onSubmit="WriteToFile(this)">
+<label>Type your first name:</label>
+<input type="text" name="FirstName" id="firstName" size="20">
+ 
+<input type="submit" value="submit">
 </form>

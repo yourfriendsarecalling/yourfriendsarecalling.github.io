@@ -2,25 +2,15 @@
 layout: default
 ---
 
-<div id="call"></div>
-<!--
-<div id="call"><img src="call.jpg"></div>
--->
+<div id="calllink"><img id="call" src="call.jpg"></img></div>
 
 <script>
-  var ahref = document.createElement("a");
-  a.href = "outtime.html";
-  a.id = "calllink";
-  
-  var img = document.createElement("img");
-  img.src = "call.jpg";
-
-  var div = document.getElementById("call");
-  div.appendChild(ahref);
-
-  var alink = document.getElementById("calllink");
-  alink.appendChild(img);
-  //div.setAttribute("style", "text-align:left");
+var a = document.createElement("a");
+a.href = "outtime.html";
+//var image = document.getElementById("calllink").getElementsByTagName("img")[0];
+var image = document.getElementById("calllink").getElementById("call");
+b = a.appendChild("image");
+document.getElementById("calllink").appendChild(a);
 </script>
 
 <!--

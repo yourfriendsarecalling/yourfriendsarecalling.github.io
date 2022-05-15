@@ -28,7 +28,7 @@ Ends @ 7 PM
 
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("May 15, 2022 08:42:00").getTime();
+var countDownDate = new Date("May 20, 2022 19:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -37,8 +37,8 @@ var x = setInterval(function() {
   var now = new Date().getTime();
     
   // Find the distance between now and the count down date
-//  var distance = countDownDate - (now + (2 * 1000 * 60 * 60));
-  var distance = countDownDate - (now + (2 * 1000 * 60));
+  var distance = countDownDate - (now + (2 * 1000 * 60 * 60));
+//  var distance = countDownDate - (now + (2 * 1000 * 60));
     
   // Time calculations for days, hours, minutes and seconds
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -55,15 +55,15 @@ var x = setInterval(function() {
   if (distance < 0) {
     // clearInterval(x);
     document.getElementById("forbeer").innerHTML = "...you to party!";
-	document.getElementById("cdt").innerHTML = "And it's on RIGHT NOW!";
+	document.getElementById("cdt").innerHTML = "It's on RIGHT NOW!";
   }
 
   // If the count down is over, write some text 
-//  if (distance < (0 - 2 * 1000 * 60 * 60)) {
-  if (distance < (0 - 2 * 1000 * 60)) {
+  if (distance < (0 - 2 * 1000 * 60 * 60)) {
+//  if (distance < (0 - 2 * 1000 * 60)) {
     clearInterval(x);
     document.getElementById("forbeer").innerHTML = "...for you to leave.";
-	document.getElementById("cdt").innerHTML = "And now IT'S OVER!";
+	document.getElementById("cdt").innerHTML = "It's over. So GET OUT!";
   }
 }, 1000);
 </script>

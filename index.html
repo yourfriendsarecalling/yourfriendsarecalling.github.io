@@ -19,7 +19,7 @@ layout: default
 <h1 id="forbeer"></h1>
 
 <blockquote>
-Saturday 5/14 @ 5 PM</br>
+Friday 5/20 @ 5 PM</br>
 @ Greg & Laura's</br>
 Ends @ 7 PM
 </blockquote>
@@ -28,7 +28,7 @@ Ends @ 7 PM
 
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("May 14, 2022 17:01:00").getTime();
+var countDownDate = new Date("May 15, 2022 08:42:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -37,7 +37,8 @@ var x = setInterval(function() {
   var now = new Date().getTime();
     
   // Find the distance between now and the count down date
-  var distance = countDownDate - (now + (2 * 1000 * 60 * 60));
+//  var distance = countDownDate - (now + (2 * 1000 * 60 * 60));
+  var distance = countDownDate - (now + (2 * 1000 * 60));
     
   // Time calculations for days, hours, minutes and seconds
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -58,7 +59,8 @@ var x = setInterval(function() {
   }
 
   // If the count down is over, write some text 
-  if (distance < (0 - 2 * 1000 * 60 * 60)) {
+//  if (distance < (0 - 2 * 1000 * 60 * 60)) {
+  if (distance < (0 - 2 * 1000 * 60)) {
     clearInterval(x);
     document.getElementById("forbeer").innerHTML = "...for you to leave.";
 	document.getElementById("cdt").innerHTML = "And now IT'S OVER, so GET OUT!";

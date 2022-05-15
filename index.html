@@ -10,16 +10,16 @@ layout: default
 <script>
   var ahref = document.createElement("a");
   a.href = "outtime.html";
+  a.id = "calllink";
   
   var img = document.createElement("img");
-  img.id = "link";
   img.src = "call.jpg";
 
-  var link = document.getElementById("call");
+  var div = document.getElementById("call");
   div.appendChild(ahref);
 
-  var div = document.getElementById("link");
-  div.appendChild(img);
+  var alink = document.getElementById("calllink");
+  alink.appendChild(img);
   //div.setAttribute("style", "text-align:left");
 </script>
 
@@ -31,7 +31,8 @@ layout: default
 <blockquote>
 Friday 5/20 @ 5 PM</br>
 @ Greg & Laura's</br>
-Ends @ 7 PM
+Ends @ 7 PM</br>
+BYOB
 </blockquote>
 
 <h2 id="cdt"></h2>
@@ -57,7 +58,7 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Output the result in an elements with id="forbeer" and id="cdt"
-  document.getElementById("forbeer").innerHTML = "...for beer!";
+  document.getElementById("forbeer").innerHTML = "...for fun!";
   document.getElementById("cdt").innerHTML = "Answer the call in " + days + "d " + hours + "h "
   + minutes + "m " + seconds + "s ";
     

@@ -4,29 +4,6 @@ layout: default
 
 <div id="x"></div>
 
-<!--
-<script>
-  // Create an anchor element and assign to a variable, then assign the href and id attributes
-  var a = document.createElement("a");
-  a.href = "outtime.html";
-  a.id = "y";
-
-  // Create an image element and assign to a variable, then assign the src and id attributes
-  var img = document.createElement("img");
-  img.src = "call.jpg";
-  img.alt = "The call";
-
-  // Get the div element and assign to a variable, then append the anchor element
-//  var div = document.getElementById("x");
-//  div.append(a);
-//  x.append(a);
-
-  // Get the anchor element and assign to a variable, then append the image element
-//  var link = document.getElementById("y");
-  x.append(img);
-</script>
--->
-
 <!-- A heading with the reason for the call and other messages -->
 <h1 id="forbeer"></h1>
 
@@ -43,7 +20,7 @@ BYOB
 
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("May 20, 2022 19:00:00").getTime();
+var countDownDate = new Date("May 16, 2022 10:20:00").getTime();
 
 // Update the count down every 1 second
 var int = setInterval(function() {
@@ -52,8 +29,8 @@ var int = setInterval(function() {
   var now = new Date().getTime();
     
   // Find the distance between now and the count down date
-  var distance = countDownDate - (now + (2 * 1000 * 60 * 60));
-//  var distance = countDownDate - (now + (2 * 1000 * 60));
+//  var distance = countDownDate - (now + (2 * 1000 * 60 * 60));
+  var distance = countDownDate - (now + (2 * 1000 * 60));
     
   // Time calculations for days, hours, minutes and seconds
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -75,8 +52,8 @@ var int = setInterval(function() {
   }
 
   // If the count down is over, update image, heading and timer again 
-  if (distance < (0 - 2 * 1000 * 60 * 60)) {
-//  if (distance < (0 - 2 * 1000 * 60)) {
+//  if (distance < (0 - 2 * 1000 * 60 * 60)) {
+  if (distance < (0 - 2 * 1000 * 60)) {
     clearInterval(int);
     x.innerHTML = '<img src="kick.gif" alt="the kick"></img>';
     forbeer.innerHTML = "...for you to leave.";

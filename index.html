@@ -60,10 +60,11 @@ var int = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Output the result in an elements with id="forbeer" and id="cdt"
-  document.getElementById("forbeer").innerHTML = "...for beer!";
+//  document.getElementById("forbeer").innerHTML = "...for beer!";
+  forbeer.replaceChildren(",,,for fun!");
 //  document.getElementById("cdt").innerHTML = "Answer the call in " + days + "d " + hours + "h "
   + minutes + "m " + seconds + "s ";
-  cdt.replaceChildren("Answer the call in " + days + "d " + hours + "h "
+  cdt.replaceChildren("Answer the call in ", days + "d " + hours + "h "
   + minutes + "m " + seconds + "s ");
   
   // If the count down indicates the event has begun, write some text 

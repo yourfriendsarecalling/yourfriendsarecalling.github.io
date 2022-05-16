@@ -4,6 +4,7 @@ layout: default
 
 <div id="x"></div>
 
+<!--
 <script>
   // Create an anchor element and assign to a variable, then assign the href and id attributes
   var a = document.createElement("a");
@@ -24,8 +25,9 @@ layout: default
 //  var link = document.getElementById("y");
   x.append(img);
 </script>
+-->
 
-<!-- A heading with the reason for the call -->
+<!-- A heading with the reason for the call and other messages -->
 <h1 id="forbeer"></h1>
 
 <!-- The details of the event -->
@@ -59,35 +61,35 @@ var int = setInterval(function() {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
-  // Output the result in an elements with id="forbeer" and id="cdt"
-//  document.getElementById("forbeer").innerHTML = "...for beer!";
-  forbeer.replaceChildren(",,,for fun!");
-//  document.getElementById("cdt").innerHTML = "Answer the call in " + days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-  cdt.replaceChildren("Answer the call in ", days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ");
+  // Update the heading and timer in elements id="forbeer" and id="cdt"
+  var img = document.createElement("img");
+  img.src = "call.gif";
+  img.alt = "cheers";
+  x.replaceChildren(img);
+  forbeer.replaceChildren("...for fun!");
+  cdt.replaceChildren("Answer the call in ", days, "d ", hours, "h ", minutes, "m ", seconds, "s ");
   
   // If the count down indicates the event has begun, write some text 
   if (distance < 0) {
     // clearInterval(int);
-    document.getElementById("forbeer").innerHTML = "...you to party!";
-	document.getElementById("cdt").innerHTML = "It's on RIGHT NOW!";
     var img = document.createElement("img");
     img.src = "homer-bender.gif";
     img.alt = "cheers";
 	x.replaceChildren(img);
+    document.getElementById("forbeer").innerHTML = "...you to party!";
+	document.getElementById("cdt").innerHTML = "It's on RIGHT NOW!";
   }
 
   // If the count down is over, write some text 
 //  if (distance < (0 - 2 * 1000 * 60 * 60)) {
   if (distance < (0 - 2 * 1000 * 60)) {
     clearInterval(int);
-    document.getElementById("forbeer").innerHTML = "...for you to leave.";
-	document.getElementById("cdt").innerHTML = "It's over. So GET OUT!";
     var img = document.createElement("img");
     img.src = "call.jpg";
     img.alt = "the cally";
 	x.replaceChildren(img);
+    document.getElementById("forbeer").innerHTML = "...for you to leave.";
+	document.getElementById("cdt").innerHTML = "It's over. So GET OUT!";
   }
 }, 1000);
 </script>

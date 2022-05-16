@@ -41,7 +41,7 @@ BYOB
 
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("May 15, 2022 10:10:00").getTime();
+var countDownDate = new Date("May 15, 2022 22:12:00").getTime();
 
 // Update the count down every 1 second
 var int = setInterval(function() {
@@ -81,6 +81,10 @@ var int = setInterval(function() {
     clearInterval(int);
     document.getElementById("forbeer").innerHTML = "...for you to leave.";
 	document.getElementById("cdt").innerHTML = "It's over. So GET OUT!";
+    var img = document.createElement("img");
+    img.src = "call.jpg";
+    img.alt = "the cally";
+	x.replaceChildren(img);
   }
 }, 1000);
 </script>

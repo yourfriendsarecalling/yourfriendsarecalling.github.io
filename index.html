@@ -5,24 +5,29 @@ layout: default
 <div id="x"></div>
 
 <script>
-var a = document.createElement("a");
-a.href = "outtime.html";
-a.id = "y";
+  // Create an anchor element and assign to a variable, then assign the href and id attributes
+  var a = document.createElement("a");
+  a.href = "outtime.html";
+  a.id = "y";
 
-var div = document.getElementById("x");
-div.appendChild(a);
+  // Get the div element and assign to a variable, then append the anchor element
+  var div = document.getElementById("x");
+  div.appendChild(a);
 
-var img = document.createElement("img");
-img.src = "call.jpg";
-img.alt = "the call";
+  // Create an image element and assign to a variable, then assign the src and id attributes
+  var img = document.createElement("img");
+  img.src = "call.jpg";
+  img.alt = "The call";
 
-
-var link = document.getElementById("y");
-a.appendChild(img);
+  // Get the anchor element and assign to a variable, then append the image element
+  var link = document.getElementById("y");
+  link.appendChild(img);
 </script>
 
+<!-- A heading with the reason for the call -->
 <h1 id="forbeer"></h1>
 
+<!-- The details of the event -->
 <blockquote>
 Friday 5/20 @ 5 PM</br>
 @ Greg & Laura's</br>
@@ -30,6 +35,7 @@ Ends @ 7 PM</br>
 BYOB
 </blockquote>
 
+<!-- The heading where the coundown timer and other messages go -->
 <h2 id="cdt"></h2>
 
 <script>

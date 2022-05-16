@@ -7,7 +7,7 @@ layout: default
 <script>
 let currentDate = new Date();
 let time = currentDate.getHours() + ":" + currentDate.getMinutes() + ":" + currentDate.getSeconds();
-document.getElementById("outtime").innerHTML = "You left at: " + time
+document.getElementById("outtime").innerHTML = "By my calculations, you are leaving at: " + time
 var now = new Date().getTime();
 </script>
 
@@ -15,13 +15,14 @@ var now = new Date().getTime();
 function WriteToFile(passForm) {
  
     set fso = CreateObject("Scripting.FileSystemObject"); 
-    set s   = fso.CreateTextFile("outtime2.txt", True);
+    set s = fso.CreateTextFile("outtime2.txt", True);
  
     var firstName = document.getElementById('FirstName');
  
     s.writeline(firstName);
     s.writeline(currentDate);
     s.writeline(time);
+    s.writeline(now);
  
     s.Close();
  }

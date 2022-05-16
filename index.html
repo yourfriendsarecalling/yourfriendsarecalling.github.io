@@ -63,7 +63,9 @@ var int = setInterval(function() {
   document.getElementById("forbeer").innerHTML = "...for beer!";
   document.getElementById("cdt").innerHTML = "Answer the call in " + days + "d " + hours + "h "
   + minutes + "m " + seconds + "s ";
-    
+  cdt.append("Answer the call in " + days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ");
+  
   // If the count down indicates the event has begun, write some text 
   if (distance < 0) {
     // clearInterval(int);

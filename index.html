@@ -10,18 +10,19 @@ layout: default
   a.href = "outtime.html";
   a.id = "y";
 
-  // Get the div element and assign to a variable, then append the anchor element
-  var div = document.getElementById("x");
-  div.appendChild(a);
-
   // Create an image element and assign to a variable, then assign the src and id attributes
   var img = document.createElement("img");
   img.src = "call.jpg";
   img.alt = "The call";
 
+  // Get the div element and assign to a variable, then append the anchor element
+  var div = document.getElementById("x");
+//  div.appendChild(a);
+  div.appendChild(img);
+
   // Get the anchor element and assign to a variable, then append the image element
-  var link = document.getElementById("y");
-  link.appendChild(img);
+//  var link = document.getElementById("y");
+//  link.appendChild(img);
 </script>
 
 <!-- A heading with the reason for the call -->

@@ -43,7 +43,7 @@ BYOB
 
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("May 20, 2022 19:00:00").getTime();
+var countDownDate = new Date("May 15, 2022 23:25:00").getTime();
 
 // Update the count down every 1 second
 var int = setInterval(function() {
@@ -61,30 +61,26 @@ var int = setInterval(function() {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
-  // Update the heading and timer in elements id="forbeer" and id="cdt"
-//  var img = document.createElement("img");
-//  img.src = "call.jpg";
-//  img.alt = "the call";
-//  x.replaceChildren(img);
+  // Fill in the image, heading and timer in elements id="x" and id="forbeer" and id="cdt"
   x.innerHTML = '<img src="call.jpg" alt="the call"></img>';
   forbeer.innerHTML = '...for fun!';
   cdt.innerHTML = "Answer the call in " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
   
-  // If the count down indicates the event has begun, write some text 
+  // If the count down indicates the event has begun, update image, heading and timer again 
   if (distance < 0) {
     // clearInterval(int);
     x.innerHTML = '<img src="homer-bender.gif" alt="the clink"></img>';
-    document.getElementById("forbeer").innerHTML = "...you to party!";
-	document.getElementById("cdt").innerHTML = "It's on RIGHT NOW!";
+    forbeer.innerHTML = "...you to party!";
+	cdt.innerHTML = "It's on RIGHT NOW! and it ends in " + hours + "h " + minutes + "m " + seconds + "s ";
   }
 
-  // If the count down is over, write some text 
+  // If the count down is over, update image, heading and timer again 
 //  if (distance < (0 - 2 * 1000 * 60 * 60)) {
   if (distance < (0 - 2 * 1000 * 60)) {
     clearInterval(int);
     x.innerHTML = '<img src="kick.gif" alt="the kick"></img>';
-    document.getElementById("forbeer").innerHTML = "...for you to leave.";
-	document.getElementById("cdt").innerHTML = "It's over. So GET OUT!";
+    forbeer.innerHTML = "...for you to leave.";
+	cdt.innerHTML = "It's over. So GET OUT!";
   }
 }, 1000);
 </script>

@@ -64,11 +64,15 @@ var x = setInterval(function() {
   document.getElementById("cdt").innerHTML = "Answer the call in " + days + "d " + hours + "h "
   + minutes + "m " + seconds + "s ";
     
-  // If the count down is over, write some text 
+  // If the count down indicates the event has begun, write some text 
   if (distance < 0) {
     // clearInterval(x);
     document.getElementById("forbeer").innerHTML = "...you to party!";
 	document.getElementById("cdt").innerHTML = "It's on RIGHT NOW!";
+    var img = document.createElement("img");
+    img.src = "homer-bender.gif";
+    img.alt = "cheers";
+	y.replaceChildren(img);
   }
 
   // If the count down is over, write some text 

@@ -21,7 +21,7 @@ BYOB
 
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("May 19, 2022 19:00:00").getTime();
+var countDownDate = new Date("May 20, 2022 19:00:00").getTime();
 
 // Update the count down every 1 second
 var int = setInterval(function() {
@@ -30,8 +30,8 @@ var int = setInterval(function() {
   var now = new Date().getTime();
     
   // Find the distance between now and the count down date
-//  var distance = countDownDate - (now + (2 * 1000 * 60 * 60));
-  var distance = countDownDate - (now + (2 * 1000 * 60));
+  var distance = countDownDate - (now + (2 * 1000 * 60 * 60));
+//  var distance = countDownDate - (now + (2 * 1000 * 60));
     
   // Time calculations for days, hours, minutes and seconds
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -53,8 +53,8 @@ var int = setInterval(function() {
   }
 
   // If the count down is over, update image, heading and timer again 
-//  if (distance < (0 - 2 * 1000 * 60 * 60)) {
-  if (distance < (0 - 2 * 1000 * 60)) {
+  if (distance < (0 - 2 * 1000 * 60 * 60)) {
+//  if (distance < (0 - 2 * 1000 * 60)) {
     clearInterval(int);
     x.innerHTML = '<img src="kick.gif" alt="the kick"></img>';
     forbeer.innerHTML = "...for you to leave.";

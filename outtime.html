@@ -12,25 +12,36 @@ var now = new Date().getTime();
 </script>
 
 <script>
-function WriteToFile(passForm) {
+// Requiring fs module in which
+// writeFile function is defined.
+const fs = require('fs')
+
+// Write data in 'Output.txt' .
+fs.writeFile('outtime.txt', time, (err) => {
+      
+    // In case of a error throw err.
+    if (err) throw err;
+})
+
+//function WriteToFile(passForm) {
  
-    set fso = CreateObject("Scripting.FileSystemObject"); 
-    set s = fso.CreateTextFile("outtime2.txt", True);
+//    set fso = CreateObject("Scripting.FileSystemObject"); 
+//    set s = fso.CreateTextFile("outtime2.txt", True);
+// 
+//   var firstName = document.getElementById('FirstName');
+
+//    fs.writeline(firstName);
+//    fs.writeline(currentDate);
+//    fs.writeline(time);
+//    fs.writeline(now);
  
-    var firstName = document.getElementById('FirstName');
- 
-    s.writeline(firstName);
-    s.writeline(currentDate);
-    s.writeline(time);
-    s.writeline(now);
- 
-    s.Close();
+//    s.Close();
  }
 </script>
 
 <form onSubmit="WriteToFile(this)">
 <label>Type your first name:</label>
 <input type="text" name="FirstName" id="firstName" size="20">
- 
+
 <input type="submit" value="submit">
 </form>

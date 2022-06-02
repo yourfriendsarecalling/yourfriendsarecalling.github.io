@@ -7,37 +7,12 @@ layout: default
 <script>
 let currentDate = new Date();
 let time = currentDate.getHours() + ":" + currentDate.getMinutes() + ":" + currentDate.getSeconds();
-document.getElementById("outtime").innerHTML = "By my calculations, you are leaving at: " + time
+document.getElementById("outtime").innerHTML = "By my calculations, you are leaving at: " + time;
+document.getElementById("outtime").innerHTML = "By my calculations, you are leaving at: " + currentDate;
 var now = new Date().getTime();
 </script>
 
 <script>
-// Requiring fs module in which
-// writeFile function is defined.
-const fs = require('fs')
-
-
-function WriteToFile(passForm) {
- 
-// Write data in 'outtime.txt' .
-fs.writeFile('outtime.txt', time, (err) => {
-      
-    // In case of a error throw err.
-    if (err) throw err;
-})
-
-//    set fso = CreateObject("Scripting.FileSystemObject"); 
-//    set s = fso.CreateTextFile("outtime2.txt", True);
-// 
-//   var firstName = document.getElementById('FirstName');
-
-    fs.writeline(firstName);
-//    fs.writeline(currentDate);
-//    fs.writeline(time);
-//    fs.writeline(now);
- 
-//    s.Close();
- }
 </script>
 
 <form onSubmit="WriteToFile(this)">

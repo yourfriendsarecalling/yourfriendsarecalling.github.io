@@ -7,15 +7,26 @@ layout: default
 <script>
 let currentDate = new Date();
 let time = currentDate.getHours() + ":" + currentDate.getMinutes() + ":" + currentDate.getSeconds();
-document.getElementById("outtime").innerHTML = "By my calculations, you are leaving at: " + time;
+//document.getElementById("outtime").innerHTML = "By my calculations, you are leaving at: " + time;
 document.getElementById("outtime").innerHTML = "By my calculations, you are leaving at: " + currentDate;
 var now = new Date().getTime();
 </script>
 
 <script>
+const fs = require('fs/promises');
+
+async function example() {
+  try {
+    const content = 'Some content!';
+    await fs.appendFile('outtime.txt', content);
+  } catch (err) {
+    console.log(err);
+  }
+}
+example();
 </script>
 
-<form onSubmit="WriteToFile(this)">
+<form onSubmit="example()">
 <label>Type your first name:</label>
 <input type="text" name="FirstName" id="firstName" size="20">
 

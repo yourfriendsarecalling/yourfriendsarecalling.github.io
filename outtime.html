@@ -16,15 +16,16 @@ var now = new Date().getTime();
 // writeFile function is defined.
 const fs = require('fs')
 
-// Write data in 'Output.txt' .
+
+function WriteToFile(passForm) {
+ 
+// Write data in 'outtime.txt' .
 fs.writeFile('outtime.txt', time, (err) => {
       
     // In case of a error throw err.
     if (err) throw err;
 })
 
-//function WriteToFile(passForm) {
- 
 //    set fso = CreateObject("Scripting.FileSystemObject"); 
 //    set s = fso.CreateTextFile("outtime2.txt", True);
 // 
